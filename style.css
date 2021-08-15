@@ -2,9 +2,9 @@
 
 :root {
   --left-bg-color: rgba(119, 63, 151, 0.7);
-  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --right-bg-color: rgba(43, 43, 43, 0.527);
   --left-btn-hover-color: rgb(83, 8, 90);
-  --right-btn-hover-color: rgba(122, 114, 172, 0.308);
+  --right-btn-hover-color: rgba(13, 5, 68, 0.308);
   --hover-width: 75%;
   --other-width: 25%;
   --speed: 1000ms;
@@ -67,7 +67,7 @@ h1 {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #333;
+  background: rgb(71, 69, 69);
 }
 
 .split {
