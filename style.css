@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-  --left-bg-color: rgba(87, 84, 236, 0.7);
+  --left-bg-color: rgba(119, 63, 151, 0.7);
   --right-bg-color: rgba(43, 43, 43, 0.8);
-  --right-btn-hover-color: rgba(87, 84, 236, 1);
-  --left-btn-hover-color: rgba(28, 122, 28, 1);
+  --left-btn-hover-color: rgb(83, 8, 90);
+  --right-btn-hover-color: rgba(122, 114, 172, 0.308);
   --hover-width: 75%;
   --other-width: 25%;
+  --speed: 1000ms;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -84,7 +86,7 @@ h1 {
 }
 .split.left {
   left: 0;
-  background: url('galaxy-s20_bts-edition.jpg');
+  background: url('images/galaxy-s20_bts-edition-2.webp');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -98,11 +100,19 @@ h1 {
 }
 .split.right {
   right: 0;
-  background: url('iphone-12-pro.png');
+  background: url('images/iphone-12-pro.png');
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+/* Adding smooth transition */
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+  transition: all var(--speed) ease-in-out;
+}
 /* hover effect */
 .hover-left .left {
   width: var(--hover-width);
@@ -118,4 +128,16 @@ h1 {
 
 .hover-right .left {
   width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    top: 30%;
+  }
+
+  .btn {
+    padding: 1.2rem;
+    width: 12rem;
+  }
 }
